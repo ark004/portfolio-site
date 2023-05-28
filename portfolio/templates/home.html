@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+  {% for ff in ff %}
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <p>{{ ff.name }}</p>
+              <img src="{{ ff.images.url }}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{{ ff.images.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ ff.description }} "><i class="bx bx-plus"></i></a>
+                <a href="{{ ff.urls }}" title="More Details"><i class="bx bx-link"></i>Github</a>
+              </div>
+            </div>
+          </div>
+
+
+  
+  
+  <!-- <div>
+        <h2>{{ ff.name }}</h2>
+        <p>{{ ff.description }}</p>
+        <a href="{{ ff.urls }}">Link</a>
+        <img src="{{ ff.images.url }}" alt="{{ ff.name }} Image">
+    </div> -->
+ {% endfor %}
+
+
+ 
+
+{% endblock %}

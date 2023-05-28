@@ -1,0 +1,457 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!-- CSS only -->
+  <title>Portfolio </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <!-- Favicons -->
+
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/btn.css' %}" rel="stylesheet">
+<!--  <link href="{% static 'assets/css/what.css' %}" rel="stylesheet">-->
+
+
+</head>
+
+<body>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{% static 'assets/img/mypic.jpg' %}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Anoop R Krishna</a></h1>
+        <div class="social-links mt-3 text-center">
+<!--          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://t.me/Trazen" class="telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://www.linkedin.com/in/anooprkrishna/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          {% if user.is_authenticated %}
+          <a href="{% url 'account:user_logout' %}" class="bi bi-box-arrow-right"><i class="bi bi-box-arrow-right"></i></a>
+          <a href="{% url 'face:my_view' %}" class="telegram"><i class="bx bxl-telegram"></i></a>
+
+          {% else %}
+          <a href="{% url 'account:user_login' %}" class="bi bi-door-open"><i class=""></i></a>
+
+          {% endif %}
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+<!--          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>-->
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          
+          <!-- <li><a href="{% url 'face:my_view' %}" class="nav-link scrollto"><i class="bi bi-door-open-fill"></i> <span>form</span></a></li> -->
+          <!-- {% if user.is_authenticated %}
+          <li><a href="{% url 'account:user_logout' %}" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>logout</span></a></li>
+          <li><a href="{% url 'face:my_view' %}" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>edit</span></a></li>
+
+          {% else %}
+          <li><a href="{% url 'account:user_login' %}" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>login</span></a></li>
+
+
+
+          {% endif %}
+
+ -->
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+<div>
+
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Anoop R Krishna</h1>
+      <p>I'm <span class="typed" data-typed-items="Python Django developer"></span></p>
+    </div>
+
+  </section><!-- End Hero -->
+</div>
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Recent software engineering graduate with fundamentals of software design, development and testing Seeking to utilize broad educational background with excellent analytical,  technical and programming skills to thrive as an entry-level software engineer. Application development in Python with backend database such as MYSQL. </p>
+          <p class="mb-0">A python developer with excellent time management skills and a can-do attitude Inclined  towards  the field of data science and  interested to work in that field of science</p>
+          <p></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="{% static 'assets/img/mypic.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Python-Django Developer.</h3>
+            <p class="fst-italic">
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Date of Birth:</strong> <span>13 july 1999</span></li>
+<!--                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>-->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9746871579</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kottayam,Kerala, INDIA</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Computer Application</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>anooprkrishnaf55@gmail.com</span></li>
+<!--                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>-->
+                </ul>
+              </div>
+            </div>
+            <p>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+<!--          <p>A python developer with excellent time management skills and a can-do attitude Inclined  towards  the field of data science and  interested to work in that field of science</p>-->
+
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">python&django <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+
+        </div> 
+       
+        <div class="sss">
+            
+        <a href="{% static '/assets/img/anooprkrishna-py.pdf' %}" download>
+            
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Download PDF
+    </a>
+    
+          </div>
+          
+
+          
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>
+</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Web</li>
+
+            </ul>
+          </div>
+        </div>
+
+
+        {% block content %}
+        {% endblock %}
+        <!-- <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <p>Foodspace</p>
+              <img src="{% static 'assets/img/portfolio/food_website.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/portfolio/food_website.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="E-commerce website: E-commerce website for food product. Implemented all necessary e-commerce functionalities like product listing, cart etc.Technology Used: Python-Django, HTML, CSS, JavaScript."><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/ark004/food_sp.git" title="More Details"><i class="bx bx-link"></i>Github</a>
+              </div>
+            </div>
+          </div> -->
+
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <p>Travell</p>
+              <img src="{% static 'assets/img/portfolio/travello main page.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/portfolio/travello main page.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Travel agency website. A Responsive Website for show there
+                    package, designations. Built using Python-django CSS,JavaScript, HTML and postgreSQL (Database)"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/ark004/travl-vlog.git" title="More Details"><i class="bx bx-link"></i>Github</a>
+              </div>
+            </div>
+          </div>
+ -->
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+
+            <div class="portfolio-wrap">
+              <p>Portfoilo</p>
+              <img src="{% static 'assets/img/portfolio/portfolio.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/portfolio/portfolio.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Personal website – A full-featured personal website build with
+                        Django Framework,front end as HTML,CSS,JavaScript."><i class="bx bx-plus"></i>Github</a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'assets/img/portfolio/payment_int.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{% static 'assets/img/portfolio/payment_int.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i>Github</a>
+              </div>
+            </div>
+          </div> -->
+
+        <!-- </div> -->
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+<!--          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Changanacherry,India</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Gmail:</h4>
+                <p>
+                <a href="mailto:infoanoop0@gmail.com">infoanoop0@gmail.com.com</a>
+                </p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+9746871579</p>
+              </div>
+              <div>
+
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62973.60260615255!2d76.50220878307181!3d9.434537682372001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06260b6892c327%3A0x86c67c02aad04a0!2sChanganassery%2C%20Kerala!5e0!3m2!1sen!2sin!4v1658606565427!5m2!1sen!2sin" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              </div>
+
+          </div>
+          
+
+
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                           <form action=" " method="POST" id="contact-form" class="form-horizontal" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                      </div>
+                    </div>
+                      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                     <button class="btn send-button" id="submit" type="submit" value="SEND">
+                      <div class="alt-send-button">
+                        <i class="fa fa-paper-plane"></i><span class= "send-text" >SEND</span>
+                      </div>
+                     </button>
+                  </form>
+
+
+
+
+
+
+
+
+
+
+<!--            <form action="" method="post" id="form1">-->
+<!--              {% csrf_token %}-->
+<!--              <label for="fname">name:</label>-->
+<!--              <input type="text" id="fname" name="full-name"><br><br>-->
+<!--              <label for="lname">Email:</label>-->
+<!--              <input type="email" id="lname" name="email"><br><br>-->
+<!--              <label for="name">subject:</label>-->
+<!--              <input type="text" id="name" name="subject"><br><br>-->
+<!--              <label for="lame">message:</label>-->
+<!--              <textarea type="text" id="lame" name="message"></textarea>-->
+<!--              <button class="app-form-button">SEND</button>-->
+<!--              </form>-->
+
+<!--          </div>-->
+
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+<!--        &copy; Copyright <strong><span>xxxx</span></strong>-->
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+         By <a href="#resume">ARK</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <!-- JavaScript Bundle with Popper -->
+</body>
+
+</html>
+
